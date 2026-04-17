@@ -57,7 +57,7 @@ DatosMasivos-aws/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/DatosMasivos-aws.git
+git clone https://github.com/Alejandrobq8/DatosMasivos-aws.git
 cd DatosMasivos-aws
 ```
 
@@ -81,7 +81,7 @@ aws configure
 - Finalmente los queries de análisis
 
 ### 6. Ver visualizaciones
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tu-usuario/DatosMasivos-aws/blob/main/notebooks/visualizaciones.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Alejandrobq8/DatosMasivos-aws/blob/main/notebooks/visualizaciones.ipynb)
 
 ---
 
@@ -99,7 +99,3 @@ aws configure
 - [ ] Exportar dashboards finales desde Google Colab
 
 ---
-
-## 👥 Equipo
-- Desarrollo del pipeline AWS: _[nombre del compañero]_
-- Análisis y consultas SQL: _[tu nombre]_
