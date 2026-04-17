@@ -1,0 +1,45 @@
+# =====================
+# Datos (archivos pesados)
+# =====================
+data/raw/
+data/results/
+*.csv
+*.parquet
+*.metadata
+*.zip
+
+# =====================
+# Credenciales AWS
+# =====================
+.env
+.aws/
+credentials
+*.pem
+*access_key*
+*secret_key*
+
+# =====================
+# Python
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# =====================
+# Jupyter / Colab
+# =====================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# =====================
+# Sistema operativo
+# =====================
+.DS_Store
+Thumbs.db
+desktop.ini
