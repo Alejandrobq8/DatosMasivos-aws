@@ -12,9 +12,29 @@ sentimientos en tweets, utilizando el dataset de Kaggle
 
 ---
 
-## 🏗️ Arquitectura
+## 📦 Dataset
 
-![Diagrama de Arquitectura](docs/arquitectura.png)
+| Campo | Detalle |
+|-------|---------|
+| Nombre | Sentiment140 |
+| Fuente | Kaggle |
+| Enlace | https://www.kaggle.com/datasets/kazanova/sentiment140 |
+| Tamaño | 227 MB |
+| Formato | CSV |
+| Registros | 1,600,000 tweets |
+| Variables | target, id, date, flag, user, text |
+
+---
+
+## ❓ Preguntas Analíticas
+
+1. ¿En qué hora y día de la semana se genera más actividad en Twitter?
+2. ¿Qué usuarios tienen mayor cantidad de tweets y cuál es su polaridad?
+3. ¿Cuáles son los hashtags más frecuentes y cuál es su sentimiento promedio?
+
+---
+
+## 🏗️ Arquitectura
 
 | Capa | Servicio | Descripción |
 |------|----------|-------------|
@@ -33,19 +53,18 @@ sentimientos en tweets, utilizando el dataset de Kaggle
 DatosMasivos-aws/
 ├── athena/
 │   ├── create_database.sql
-│   ├── create_table_tweets_db.sql
-│   ├── tweet_activity_by_hour_and_day.sql
+│   ├── create_table.sql
+│   ├── tweet_activity_by_hour_and_day_of_week.sql
 │   ├── user_sentiment_analysis.sql
 │   ├── hashtag_frequency_sentiment.sql
 │   └── total_tweets.sql
-├── data/
-│   └── raw/               # No incluido en el repo (archivos pesados)
+├── data/                  # No incluido en el repo (archivos pesados)
 ├── iam/
 │   └── policies.json
 ├── notebooks/
 │   └── visualizaciones.ipynb
 ├── scripts/
-│   └── etl_lambda.py
+│   └── etl_tweets.py
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -71,13 +90,15 @@ pip install -r requirements.txt
 aws configure
 ```
 
-### 4. Descargar dataset de Kaggle
-- Dataset: [Sentiment140](https://www.kaggle.com/datasets/kazanova/sentiment140)
-- Colocar en: `data/raw/raw/`
+### 4. Descargar dataset desde S3
+```bash
+aws s3 cp s3://datos-masivos-ulacit-2026v/raw/ ./data/raw/raw/ --recursive
+aws s3 cp s3://datos-masivos-ulacit-2026v/processed/ ./data/raw/processed/ --recursive
+```
 
 ### 5. Ejecutar queries en Athena
 - Ejecutar primero `create_database.sql`
-- Luego `create_table_tweets_db.sql`
+- Luego `create_table.sql`
 - Finalmente los queries de análisis
 
 ### 6. Ver visualizaciones
@@ -91,11 +112,5 @@ aws configure
 - **Sentimiento por usuario** — Top usuarios positivos y negativos
 - **Hashtags más frecuentes** — Tendencias y su polaridad
 - **Total de tweets** — Resumen general del dataset
-
----
-
-## ⚠️ Pendiente
-- [ ] Acceso a bucket S3 para descarga de datos procesados
-- [ ] Exportar dashboards finales desde Google Colab
 
 ---
