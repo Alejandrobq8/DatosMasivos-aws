@@ -1,10 +1,10 @@
-# DatosMasivos-AWS 🐦
+# DatosMasivos-AWS 
 
 Análisis de sentimientos de tweets a gran escala usando servicios de AWS y Google Colab.
 
 ---
 
-## 📌 Descripción
+## Descripción
 
 Este proyecto implementa un pipeline de datos completo para procesar y analizar
 sentimientos en tweets, utilizando el dataset de Kaggle
@@ -12,7 +12,7 @@ sentimientos en tweets, utilizando el dataset de Kaggle
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 | Campo | Detalle |
 |-------|---------|
@@ -26,7 +26,7 @@ sentimientos en tweets, utilizando el dataset de Kaggle
 
 ---
 
-## ❓ Preguntas Analíticas
+## Preguntas Analíticas
 
 1. ¿En qué hora y día de la semana se genera más actividad en Twitter?
 2. ¿Qué usuarios tienen mayor cantidad de tweets y cuál es su polaridad?
@@ -34,7 +34,7 @@ sentimientos en tweets, utilizando el dataset de Kaggle
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 | Capa | Servicio | Descripción |
 |------|----------|-------------|
@@ -47,7 +47,7 @@ sentimientos en tweets, utilizando el dataset de Kaggle
 
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```
 DatosMasivos-aws/
@@ -72,7 +72,7 @@ DatosMasivos-aws/
 
 ---
 
-## 🚀 Cómo reproducir el proyecto
+## Cómo reproducir el proyecto
 
 ### 1. Clonar el repositorio
 ```bash
@@ -106,11 +106,21 @@ aws s3 cp s3://datos-masivos-ulacit-2026v/processed/ ./data/raw/processed/ --rec
 
 ---
 
-## 📊 Análisis incluidos
+##  Análisis incluidos
 
 - **Actividad por hora y día** — ¿Cuándo tuitea más la gente?
 - **Sentimiento por usuario** — Top usuarios positivos y negativos
 - **Hashtags más frecuentes** — Tendencias y su polaridad
 - **Total de tweets** — Resumen general del dataset
+
+---
+
+##  Integrantes del equipo
+
+- Gabriel Varela Alvarez
+- Alejandro Barquero Quiros
+- Alberto León Rojas
+- Kendall Fallas Bolaños
+- Esteban Cerda Roman
 
 ---
