@@ -59,6 +59,10 @@ DatosMasivos-aws/
 │   ├── hashtag_frequency_sentiment.sql
 │   └── total_tweets.sql
 ├── data/                  # No incluido en el repo (archivos pesados)
+├── docs/
+│   └── actividad_tweets_por_hora.png
+│   └── top_20_hashtags_mas_frecuentes.png
+│   └── tweets_posistivos_y_negativos_por_dia.png
 ├── iam/
 │   └── policies.json
 ├── notebooks/
